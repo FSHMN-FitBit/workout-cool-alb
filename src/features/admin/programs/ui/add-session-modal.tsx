@@ -3,7 +3,7 @@
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { ExerciseAttributeValueEnum } from "@prisma/client";
+// import { ExerciseAttributeValueEnum } from "@prisma/client";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { generateSlugsForAllLanguages } from "@/shared/lib/slug";
@@ -16,6 +16,86 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 import { addSessionToWeek } from "../actions/add-session.action";
+
+// Temporary type definition until Prisma client is regenerated
+const ExerciseAttributeValueEnum = {
+  BODY_ONLY: "BODY_ONLY",
+  DUMBBELL: "DUMBBELL",
+  BARBELL: "BARBELL",
+  KETTLEBELLS: "KETTLEBELLS",
+  BANDS: "BANDS",
+  MACHINE: "MACHINE",
+  CABLE: "CABLE",
+  BODYWEIGHT: "BODYWEIGHT",
+  STRENGTH: "STRENGTH",
+  POWERLIFTING: "POWERLIFTING",
+  CALISTHENIC: "CALISTHENIC",
+  PLYOMETRICS: "PLYOMETRICS",
+  STRETCHING: "STRETCHING",
+  STRONGMAN: "STRONGMAN",
+  CARDIO: "CARDIO",
+  STABILIZATION: "STABILIZATION",
+  POWER: "POWER",
+  RESISTANCE: "RESISTANCE",
+  CROSSFIT: "CROSSFIT",
+  WEIGHTLIFTING: "WEIGHTLIFTING",
+  BICEPS: "BICEPS",
+  SHOULDERS: "SHOULDERS",
+  CHEST: "CHEST",
+  BACK: "BACK",
+  GLUTES: "GLUTES",
+  TRICEPS: "TRICEPS",
+  HAMSTRINGS: "HAMSTRINGS",
+  QUADRICEPS: "QUADRICEPS",
+  FOREARMS: "FOREARMS",
+  CALVES: "CALVES",
+  TRAPS: "TRAPS",
+  ABDOMINALS: "ABDOMINALS",
+  NECK: "NECK",
+  LATS: "LATS",
+  ADDUCTORS: "ADDUCTORS",
+  ABDUCTORS: "ABDUCTORS",
+  OBLIQUES: "OBLIQUES",
+  GROIN: "GROIN",
+  FULL_BODY: "FULL_BODY",
+  ROTATOR_CUFF: "ROTATOR_CUFF",
+  HIP_FLEXOR: "HIP_FLEXOR",
+  ACHILLES_TENDON: "ACHILLES_TENDON",
+  FINGERS: "FINGERS",
+  SMITH_MACHINE: "SMITH_MACHINE",
+  OTHER: "OTHER",
+  EZ_BAR: "EZ_BAR",
+  DESK: "DESK",
+  PULLUP_BAR: "PULLUP_BAR",
+  NONE: "NONE",
+  MEDICINE_BALL: "MEDICINE_BALL",
+  SWISS_BALL: "SWISS_BALL",
+  FOAM_ROLL: "FOAM_ROLL",
+  WEIGHT_PLATE: "WEIGHT_PLATE",
+  TRX: "TRX",
+  BOX: "BOX",
+  ROPES: "ROPES",
+  SPIN_BIKE: "SPIN_BIKE",
+  STEP: "STEP",
+  BOSU: "BOSU",
+  TYRE: "TYRE",
+  SANDBAG: "SANDBAG",
+  POLE: "POLE",
+  BENCH: "BENCH",
+  WALL: "WALL",
+  BAR: "BAR",
+  RACK: "RACK",
+  CAR: "CAR",
+  SLED: "SLED",
+  CHAIN: "CHAIN",
+  SKIERG: "SKIERG",
+  ROPE: "ROPE",
+  NA: "NA",
+  ISOLATION: "ISOLATION",
+  COMPOUND: "COMPOUND",
+} as const;
+
+type ExerciseAttributeValueEnum = typeof ExerciseAttributeValueEnum[keyof typeof ExerciseAttributeValueEnum];
 
 const sessionSchema = z.object({
   title: z.string().min(1, "Le titre est requis"),
@@ -32,7 +112,7 @@ const sessionSchema = z.object({
   descriptionZhCn: z.string().min(1, "La description en chinois est requise"),
   estimatedMinutes: z.number().min(5, "Au moins 5 minutes"),
   isPremium: z.boolean(),
-  equipment: z.array(z.nativeEnum(ExerciseAttributeValueEnum)),
+  equipment: z.array(z.enum(Object.values(ExerciseAttributeValueEnum) as [string, ...string[]])),
 });
 
 type SessionFormData = z.infer<typeof sessionSchema>;

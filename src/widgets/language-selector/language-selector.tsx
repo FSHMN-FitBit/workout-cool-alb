@@ -13,6 +13,7 @@ const languageFlags: Record<string, string> = {
   "zh-CN": "🇨🇳",
   ru: "🇷🇺",
   pt: "🇵🇹",
+  sq: "🇦🇱",
 };
 
 export function LanguageSelector() {
@@ -26,7 +27,7 @@ export function LanguageSelector() {
     document.cookie = `detected-locale=${newLocale}; max-age=${60 * 60 * 24 * 365}; path=/; samesite=lax`;
 
     // change locale immediately for better UX
-    changeLocale(newLocale as "en" | "fr" | "es" | "zh-CN" | "ru" | "pt");
+    changeLocale(newLocale as "en" | "fr" | "es" | "zh-CN" | "ru" | "pt" | "sq");
 
     // save to database (fire and forget)
     action.execute({ locale: newLocale });
@@ -46,6 +47,8 @@ export function LanguageSelector() {
         return "Русский";
       case "pt":
         return "Português";
+      case "sq":
+        return "Shqip";
       default:
         return language;
     }

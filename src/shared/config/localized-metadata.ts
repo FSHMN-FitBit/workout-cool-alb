@@ -108,12 +108,32 @@ export const LocalizedMetadata = {
     category: "健身",
     classification: "健身与健康",
   },
+  sq: {
+    title: "Workout Cool",
+    description: "Platform moderne e trajnerit të fitnesit me bazë të dhënash gjithëpërfshirëse ushtrimesh",
+    keywords: [
+      "fitnes",
+      "stërvitje",
+      "ushtrim",
+      "muskulaturë",
+      "sport",
+      "trajner",
+      "program stërvitje",
+      "aplikacion fitnes",
+      "planifikues stërvitje",
+      "bazë të dhënash ushtrimesh",
+    ],
+    ogAlt: "Workout Cool - Platform moderne fitnesi",
+    applicationName: "Workout Cool",
+    category: "fitnes",
+    classification: "Fitnes dhe Shëndetësi",
+  },
 } as const;
 
 export type SupportedLocale = keyof typeof LocalizedMetadata;
 
 export function getLocalizedMetadata(locale: string) {
-  const supportedLocales: SupportedLocale[] = ["en", "fr", "es", "pt", "ru", "zh-CN"];
+  const supportedLocales: SupportedLocale[] = ["en", "fr", "es", "pt", "ru", "zh-CN", "sq"];
 
   if (supportedLocales.includes(locale as SupportedLocale)) {
     return LocalizedMetadata[locale as SupportedLocale];
