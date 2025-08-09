@@ -31,6 +31,28 @@ export const HEART_RATE_ZONES_SEO: Record<
       "heart rate by age",
     ],
   },
+  sq: {
+    title: "Zbuloni zonat tuaja ideale të rrahjeve të zemrës për stërvitje optimale",
+    description:
+      "Llogaritni zonat tuaja të personalizuara të rrahjeve të zemrës me llogaritësin tonë falas. Formula Bazike & Karvonen, tabelë sipas moshës, udhëzues i plotë për të optimizuar stërvitjet e kardios.",
+    keywords: [
+      "llogaritës zonash rrahjesh zemre",
+      "rrahje zemre e synuar",
+      "rrahje maksimale zemre",
+      "zonat e stërvitjes",
+      "zona VO2 max",
+      "zona anaerobe",
+      "zona aerobe",
+      "zona djegie yndyrash",
+      "formula Karvonen",
+      "stërvitje me rrahje zemre",
+      "llogaritës THR",
+      "llogaritës MHR",
+      "zonat e kardios",
+      "llogaritës fitnesi",
+      "rrahjet sipas moshës",
+    ],
+  },
   es: {
     title: "Descubre tus zonas de frecuencia cardíaca ideales para un entrenamiento óptimo",
     description:

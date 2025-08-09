@@ -1,5 +1,6 @@
 import { create } from "zustand";
-import { ExerciseAttributeValueEnum, WorkoutSessionExercise } from "@prisma/client";
+import { ExerciseAttributeValueEnum } from "@/types/prisma-enums";
+import { WorkoutSessionExercise } from "@prisma/client";
 
 import { WorkoutBuilderStep } from "../types";
 import { shuffleExerciseAction } from "../actions/shuffle-exercise.action";

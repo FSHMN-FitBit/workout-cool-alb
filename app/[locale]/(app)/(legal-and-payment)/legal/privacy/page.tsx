@@ -14,11 +14,17 @@ export default async function PrivacyPolicyPage({ params }: PageProps) {
       <div className="container mx-auto max-w-4xl px-4">
         <header className="mb-10 text-center">
           <Typography className="mb-2 text-3xl md:text-4xl" variant="h1">
-            {locale === "fr" ? "Politique de Confidentialité" : "Privacy Policy"}
+            {locale === "fr" 
+              ? "Politique de Confidentialité" 
+              : locale === "sq" 
+              ? "Politika e Privatësisë e WorkoutCool"
+              : "Privacy Policy"}
           </Typography>
           <p className="text-muted-foreground text-base md:text-lg">
             {locale === "fr"
               ? "Voici comment nous traitons vos données personnelles."
+              : locale === "sq"
+              ? "Si i trajtojmë të dhënat tuaja personale në Workout Cool."
               : "How we handle your personal data at Workout Cool."}
           </p>
         </header>

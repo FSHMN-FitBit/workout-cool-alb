@@ -275,6 +275,7 @@ export default async function RootLayout({ params, children }: RootLayoutProps) 
           <link href="https://www.workout.cool/pt" hrefLang="pt" rel="alternate" />
           <link href="https://www.workout.cool/ru" hrefLang="ru" rel="alternate" />
           <link href="https://www.workout.cool/zh-CN" hrefLang="zh-CN" rel="alternate" />
+          <link href="https://www.workout.cool/sq" hrefLang="sq" rel="alternate" />
           <link href="https://www.workout.cool" hrefLang="x-default" rel="alternate" />
 
           {/* Theme color for PWA */}

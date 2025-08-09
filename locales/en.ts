@@ -1772,6 +1772,8 @@ export default {
     satisfied: "Satisfied",
     support: "Support",
     change_language: "Change language",
+    light_mode: "Light mode",
+    dark_mode: "Dark mode",
     in_progress: "In progress",
     close: "Close",
     premium: "Premium",

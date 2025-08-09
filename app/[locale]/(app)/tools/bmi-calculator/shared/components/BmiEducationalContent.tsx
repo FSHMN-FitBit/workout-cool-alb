@@ -281,16 +281,16 @@ export function BmiEducationalContent() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Metric Formula */}
           <FormulaCard
-            description="Standard international formula using kilograms and meters"
-            equation={`BMI = ${createFraction("weight (kg)", createSuperscript("height", "2") + " (m)")}`}
+            description={t("bmi-calculator.educational.metric_formula_description")}
+            equation={`BMI = ${createFraction("pesha (kg)", createSuperscript("gjatësia", "2") + " (m)")}`}
             example={`${createFraction("70", createSuperscript("1.75", "2"))} = 22.9`}
             title={t("bmi-calculator.educational.metric_formula")}
           />
 
           {/* Imperial Formula */}
           <FormulaCard
-            description="US customary units formula with conversion factor"
-            equation={`BMI = 703 × ${createFraction("weight (lbs)", createSuperscript("height", "2") + " (in)")}`}
+            description={t("bmi-calculator.educational.imperial_formula_description")}
+            equation={`BMI = 703 × ${createFraction("pesha (lbs)", createSuperscript("gjatësia", "2") + " (in)")}`}
             example={`703 × ${createFraction("154", createSuperscript("69", "2"))} = 22.9`}
             title={t("bmi-calculator.educational.imperial_formula")}
           />
@@ -379,14 +379,14 @@ export function BmiEducationalContent() {
           {/* Metric PI Formula */}
           <FormulaCard
             description={t("bmi-calculator.educational.ponderal_index_metric_description")}
-            equation={`PI = ${createFraction("weight (kg)", createSuperscript("height", "3") + " (m)")}`}
+            equation={`PI = ${createFraction("pesha (kg)", createSuperscript("gjatësia", "3") + " (m)")}`}
             title={t("bmi-calculator.educational.metric_formula")}
           />
 
           {/* Imperial PI Formula */}
           <FormulaCard
             description={t("bmi-calculator.educational.ponderal_index_imperial_description")}
-            equation={`PI = ${createFraction(createSuperscript("height", "3") + " (in)", "∛weight (lbs)")}`}
+            equation={`PI = ${createFraction(createSuperscript("gjatësia", "3") + " (in)", "∛pesha (lbs)")}`}
             title={t("bmi-calculator.educational.imperial_formula")}
           />
         </div>

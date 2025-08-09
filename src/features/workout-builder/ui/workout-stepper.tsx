@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from "react";
 import { useQueryState } from "nuqs";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { ExerciseAttributeValueEnum } from "@prisma/client";
+import { ExerciseAttributeValueEnum } from "@/types/prisma-enums";
 
 import { useI18n } from "locales/client";
 import Trophy from "@public/images/trophy.png";

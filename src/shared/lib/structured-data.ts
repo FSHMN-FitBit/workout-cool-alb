@@ -87,7 +87,9 @@ export function generateStructuredData({
               ? "ru-RU"
               : locale === "zh-CN"
                 ? "zh-CN"
-                : "fr-FR",
+                : locale === "sq"
+                  ? "sq-AL"
+                  : "fr-FR",
     publisher: {
       "@type": "Organization",
       name: SiteConfig.company.name,

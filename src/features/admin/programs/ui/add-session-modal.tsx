@@ -3,7 +3,7 @@
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-// import { ExerciseAttributeValueEnum } from "@prisma/client";
+import { ExerciseAttributeValueEnum } from "@prisma/client";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { generateSlugsForAllLanguages } from "@/shared/lib/slug";

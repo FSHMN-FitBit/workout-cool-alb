@@ -1,6 +1,6 @@
 "use server";
 
-import { ExerciseAttributeNameEnum } from "@prisma/client";
+import { ExerciseAttributeNameEnum } from "@/types/prisma-enums";
 
 import { prisma } from "@/shared/lib/prisma";
 import { actionClient } from "@/shared/api/safe-actions";

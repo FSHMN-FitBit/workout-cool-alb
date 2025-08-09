@@ -36,14 +36,6 @@ export const { useI18n, useScopedI18n, I18nProviderClient, useChangeLocale, defi
       return import("./sq");
     },
   },
-  {
-    // Uncomment to set base path
-    // basePath: '/base',
-    // Uncomment to use custom segment name
-    // segmentName: 'locale',
-    // Uncomment to set fallback locale
-    // fallbackLocale: en,
-  },
 );
 
 export type TFunction = Awaited<ReturnType<typeof useI18n>>;

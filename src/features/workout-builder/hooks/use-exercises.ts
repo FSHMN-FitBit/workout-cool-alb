@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { ExerciseAttributeValueEnum } from "@prisma/client";
+import { ExerciseAttributeValueEnum } from "@/types/prisma-enums";
 
 import { getExercisesAction } from "../actions/get-exercises.action";
 

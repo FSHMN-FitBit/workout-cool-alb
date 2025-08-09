@@ -207,6 +207,7 @@ export function SEOScripts({
       <link href={`${baseUrl}/pt${hreflangPath}`} hrefLang="pt" rel="alternate" />
       <link href={`${baseUrl}/ru${hreflangPath}`} hrefLang="ru" rel="alternate" />
       <link href={`${baseUrl}/zh-CN${hreflangPath}`} hrefLang="zh-CN" rel="alternate" />
+      <link href={`${baseUrl}/sq${hreflangPath}`} hrefLang="sq" rel="alternate" />
       <link href={`${baseUrl}/en${hreflangPath}`} hrefLang="x-default" rel="alternate" />
     </>
   ) : null;

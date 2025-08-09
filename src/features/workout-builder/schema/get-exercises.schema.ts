@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { ExerciseAttributeValueEnum } from "@prisma/client";
+import { ExerciseAttributeValueEnum } from "@/types/prisma-enums";
 
 export const getExercisesSchema = z.object({
   equipment: z.array(z.nativeEnum(ExerciseAttributeValueEnum)).min(1, "Au moins un équipement est requis"),

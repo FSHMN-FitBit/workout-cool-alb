@@ -1,4 +1,4 @@
-import { ExerciseAttributeValueEnum } from "@prisma/client";
+import { ExerciseAttributeValueEnum } from "@/types/prisma-enums";
 
 import { TFunction } from "locales/client";
 

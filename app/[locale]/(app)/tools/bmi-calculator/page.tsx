@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
           "ideal weight range",
           "health recommendations",
         ],
-        formula: "BMI = weight (kg) / height (m)²",
+        formula: "BMI = pesha (kg) / gjatësia (m)²",
         accuracy: "Standard WHO classification with detailed health risk assessment",
         targetAudience: [
           "health conscious individuals",
@@ -82,7 +82,7 @@ export default async function BmiCalculatorPage({ params }: { params: Promise<{ 
             calculatorType: "bmi",
             inputFields: ["height", "weight", "age", "gender"],
             outputFields: ["BMI", "BMI category", "health recommendations"],
-            formula: "BMI = weight (kg) / height (m)²",
+            formula: "BMI = pesha (kg) / gjatësia (m)²",
             accuracy: "Standard WHO classification",
             targetAudience: ["health conscious individuals", "fitness enthusiasts", "medical professionals", "general public"],
             relatedCalculators: ["standard-calculator", "adjusted-calculator", "pediatric-calculator", "bmi-comparison"],
