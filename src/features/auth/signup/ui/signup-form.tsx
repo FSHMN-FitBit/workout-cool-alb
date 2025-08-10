@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-import { useI18n } from "locales/client";
+import { useI18n, useCurrentLocale } from "locales/client";
 import { paths } from "@/shared/constants/paths";
 import { ProviderButton } from "@/features/auth/ui/ProviderButton";
 import { useSignUp } from "@/features/auth/signup/model/useSignUp";
@@ -17,6 +17,7 @@ import type { SignUpSchema } from "../schema/signup.schema";
 
 export const SignUpForm = () => {
   const t = useI18n();
+  const locale = useCurrentLocale();
   const searchParams = useSearchParams();
   const redirectUrl = searchParams.get("redirect");
 
@@ -52,7 +53,7 @@ export const SignUpForm = () => {
               <FormItem>
                 <FormLabel>{t("commons.first_name")}</FormLabel>
                 <FormControl>
-                  <Input placeholder="John" {...field} />
+                  <Input placeholder={locale === "sq" ? "Filan" : "John"} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -66,7 +67,7 @@ export const SignUpForm = () => {
               <FormItem>
                 <FormLabel>{t("commons.last_name")}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Doe" {...field} />
+                  <Input placeholder={locale === "sq" ? "Fisteku" : "Doe"} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -81,7 +82,7 @@ export const SignUpForm = () => {
             <FormItem>
               <FormLabel>{t("commons.email")}</FormLabel>
               <FormControl>
-                <Input placeholder="john@doe.com" {...field} />
+                <Input placeholder={locale === "sq" ? "filanfisteku@gmail.com" : "john@doe.com"} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

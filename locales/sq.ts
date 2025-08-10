@@ -1296,6 +1296,8 @@ export default {
     my_account: "Llogaria ime",
     dashboard: "Paneli",
     support: "Mbështetje",
+    send_me_link: "Ma dërgo linkun",
+    back_to_login: "Kthehu te identifikimi",
   },
   heatmap: {
     week_days_short: {
@@ -1559,4 +1561,16 @@ export default {
       },
     },
   },
+
+  // Registration
+  register_title: "Krijo një llogari",
+  register_description: "Vendos informacionin tënd më poshtë për të krijuar llogarinë",
+  register_terms: "Duke u regjistruar, pajtohesh me",
+  register_privacy: "Politikën e Privatësisë",
+  register_privacy_link: "dhe me",
+  register_privacy_link_2: "Politikën e Privatësisë",
+
+  // Forgot Password
+  password_forgot_title: "Harrove fjalëkalimin?",
+  password_forgot_subtitle: "Vendos email-in tënd për të rivendosur fjalëkalimin",
 };

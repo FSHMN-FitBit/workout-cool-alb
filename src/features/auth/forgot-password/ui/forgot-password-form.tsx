@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { useI18n } from "locales/client";
+import { useI18n, useCurrentLocale } from "locales/client";
 import { paths } from "@/shared/constants/paths";
 import { forgotPasswordSchema, ForgotPasswordSchema } from "@/features/auth/forgot-password/forgot-password.schema";
 import { Input } from "@/components/ui/input";
@@ -16,6 +16,7 @@ import { useForgotPassword } from "../model/useForgotPassword";
 
 export const ForgotPasswordForm = () => {
   const t = useI18n();
+  const locale = useCurrentLocale();
   const { forgotPassword, isLoading, isEmailSent } = useForgotPassword();
 
   const form = useForm<ForgotPasswordSchema>({
@@ -57,7 +58,7 @@ export const ForgotPasswordForm = () => {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input autoComplete="email" placeholder="nom@exemple.com" type="email" {...field} />
+                <Input autoComplete="email" placeholder={locale === "sq" ? "filanfisteku@gmail.com" : "nom@exemple.com"} type="email" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
